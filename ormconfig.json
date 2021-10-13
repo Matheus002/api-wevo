@@ -4,6 +4,9 @@
   "host": "localhost",
   "username": "docker",
   "passwword": "wevo",
-  "database": "test"
+  "database": "test",
+  "cli": {
+    "migrationsDir": "./src/db/migrations"
+  }
   
 }
