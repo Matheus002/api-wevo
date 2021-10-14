@@ -5,6 +5,7 @@
   "username": "docker",
   "passwword": "wevo",
   "database": "test",
+  "migrations": ["./src/db/migrations/*.ts"],
   "cli": {
     "migrationsDir": "./src/db/migrations"
   }

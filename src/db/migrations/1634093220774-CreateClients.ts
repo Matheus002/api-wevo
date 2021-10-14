@@ -33,15 +33,20 @@ export class CreateClients1634093220774 implements MigrationInterface {
                         type: "varchar"
                     },
                     {
-                        name: "DataNascimento",
+                        name: "data_nascimento",
                         type: "varchar"
-                    }
+                    },
+                    {
+                        name: "status",
+                        type: "smallint"
+                    }                
                 ],
-            )}        
+            })        
         )
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
+        await queryRunner.dropTable("clients");
     }
 
 }
