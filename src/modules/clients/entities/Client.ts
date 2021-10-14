@@ -1,7 +1,7 @@
-import {v4 as uuidV4} from 'uuid'
-import {Column, Entity, PrimaryColumn} from 'typeorm'
+import { Column, Entity, PrimaryColumn } from 'typeorm'
+import { v4 as uuidV4 } from 'uuid'
 
-@Entity("clients")
+@Entity('clients')
 class Client {
   @PrimaryColumn()
   id?: string
@@ -29,9 +29,9 @@ class Client {
 
   constructor() {
     if (!this.id) {
-      this.id = uuidV4();
+      this.id = uuidV4()
     }
   }
 }
 
-export {Client}
+export { Client }

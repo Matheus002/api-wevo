@@ -1,15 +1,14 @@
-import  express, { request, response } from "express"
+import express from 'express'
+import cors from 'cors'
 
-import "../db"
-import { clientsRoutes } from "../routes/clients.routes"
+import '../db'
+import { router } from '@/routes'
 
 const app = express()
 
-app.use(clientsRoutes)
+app.use(express.json())
+app.use(cors())
 
-// app.get('/', (request, response) => {
-//   return response.json({message: "Olá Wevo"})
-// })
-
+app.use(router)
 
 app.listen(3333, () => console.log('Server running at http://localhost:3333'))
