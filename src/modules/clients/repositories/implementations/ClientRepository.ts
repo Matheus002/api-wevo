@@ -11,17 +11,7 @@ class ClientRepository {
     this.repository = getRepository(Client)
   }
 
-  public static getInstance(): ClientRepository {
-    if (!ClientRepository.INSTANCE) {
-      ClientRepository.INSTANCE = new ClientRepository()
-    }
-    return ClientRepository.INSTANCE
-  }
-
   async create({nome, cpf, email,telefone, sexo, dataNascimento}): Promise<void> {
-    // Object.assign(Client, {
-    //   nome, cpf, email,telefone, sexo, data_nascimento
-    // })
 
     const client = this.repository.create({
       nome, 

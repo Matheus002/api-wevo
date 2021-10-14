@@ -1,13 +1,13 @@
 import { ClientRepository } from "@/modules/clients/repositories/implementations/ClientRepository";
+import { CreateClientController } from "@/modules/clients/useCases/createClient/CreateClientController";
 import { request, response, Router } from "express";
 
 const clientsRoutes =  Router();
 //const clientsRepository = new ClientRepository()
 
 clientsRoutes.post('/', (request, response) => {
-  const { nome, cpf, email, telefone, sexo, data_nascimento } = request.body
+  return CreateClientController.handle(request, response);
   
-  //const clientAlreadyExist
 })
 
 clientsRoutes.get('/', (request, response) => {
